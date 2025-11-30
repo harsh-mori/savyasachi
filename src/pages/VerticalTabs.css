@@ -1,0 +1,891 @@
+/* ============================================
+   VERTICAL TABS LAYOUT - WHITE THEME
+   ============================================ */
+
+.vertical-tabs-section {
+  padding: 80px 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.vertical-tabs-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ============================================
+   VERTICAL SIDEBAR
+   ============================================ */
+
+.vertical-tabs-sidebar {
+  position: sticky;
+  top: 160px;
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  max-height: calc(100vh - 180px);
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.vertical-tabs-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+/* CNC Machines Sidebar - Perfect height as is */
+.cnc-machines-sidebar {
+  min-height: 580px;
+}
+
+/* Measurement Tools Sidebar - Increased height for 7 items */
+.measurement-tools-sidebar {
+  min-height: 920px;
+}
+
+.tabs-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.tabs-count {
+  background: #fff3e0;
+  color: #f59e0b;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ============================================
+   TAB BUTTONS
+   ============================================ */
+
+.tabs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  min-height: 80px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px !important;
+  cursor: pointer;
+  transition: none !important;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  overflow: hidden !important;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Force no hover effects */
+  will-change: auto;
+}
+
+/* Completely disable all hover effects */
+.tab-button:hover,
+.tab-button:focus,
+.tab-button:active {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.tab-button.active {
+  background: #fff3e0 !important;
+  border-color: #FDB813 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.tab-button.active:hover,
+.tab-button.active:focus,
+.tab-button.active:active {
+  background: #fff3e0 !important;
+  border-color: #FDB813 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.tab-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 700;
+  transition: none !important;
+  pointer-events: none;
+}
+
+.tab-button:hover .tab-number,
+.tab-button:focus .tab-number,
+.tab-button:active .tab-number {
+  background: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
+
+.tab-button.active .tab-number {
+  background: #FDB813 !important;
+  color: #ffffff !important;
+}
+
+.tab-button.active:hover .tab-number,
+.tab-button.active:focus .tab-number,
+.tab-button.active:active .tab-number {
+  background: #FDB813 !important;
+  color: #ffffff !important;
+}
+
+.tab-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.tab-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  pointer-events: none;
+}
+
+.tab-button:hover .tab-title,
+.tab-button:focus .tab-title,
+.tab-button:active .tab-title {
+  color: #1f2937 !important;
+}
+
+.tab-category {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.2;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  pointer-events: none;
+}
+
+.tab-button.active .tab-category {
+  color: #f59e0b !important;
+}
+
+.tab-button:hover .tab-category,
+.tab-button:focus .tab-category,
+.tab-button:active .tab-category {
+  color: #6b7280 !important;
+}
+
+.tab-button.active:hover .tab-category,
+.tab-button.active:focus .tab-category,
+.tab-button.active:active .tab-category {
+  color: #f59e0b !important;
+}
+
+.tab-arrow {
+  flex-shrink: 0;
+  color: #d1d5db;
+  transition: none !important;
+  pointer-events: none;
+}
+
+.tab-button:hover .tab-arrow,
+.tab-button:focus .tab-arrow,
+.tab-button:active .tab-arrow {
+  color: #d1d5db !important;
+}
+
+.tab-button.active .tab-arrow {
+  color: #FDB813 !important;
+}
+
+.tab-button.active:hover .tab-arrow,
+.tab-button.active:focus .tab-arrow,
+.tab-button.active:active .tab-arrow {
+  color: #FDB813 !important;
+}
+
+/* ============================================
+   TAB CONTENT AREA
+   ============================================ */
+
+.tab-content-area {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+/* Machine/Tool Header */
+.machine-header {
+  margin-bottom: 40px;
+}
+
+.machine-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #fff3e0;
+  border: 1px solid #fbbf24;
+  border-radius: 20px;
+  color: #f59e0b;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.machine-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.machine-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+  max-width: 800px;
+}
+
+/* Tool Range & Accuracy Badges */
+.tool-range-accuracy {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.range-badge,
+.accuracy-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.range-badge svg,
+.accuracy-badge svg {
+  color: #FDB813;
+}
+
+/* Machine Images */
+.machine-images {
+  margin: 40px 0;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Details Grid */
+.machine-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.details-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.details-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 20px 0;
+}
+
+.details-title svg {
+  color: #FDB813;
+  flex-shrink: 0;
+}
+
+/* Specifications Grid */
+.specs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.spec-value {
+  font-size: 15px;
+  color: #111827;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Features List */
+.features-list,
+.applications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.features-list li,
+.applications-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.features-list li svg {
+  flex-shrink: 0;
+  color: #FDB813;
+}
+
+.applications-list li svg {
+  flex-shrink: 0;
+  color: #FDB813;
+}
+
+/* CTA Buttons */
+.machine-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cta-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button.primary {
+  background: #FDB813;
+  color: #000000;
+  border: 2px solid #FDB813;
+}
+
+.cta-button.primary:hover {
+  background: #e5a80f;
+  border-color: #e5a80f;
+}
+
+.cta-button.secondary {
+  background: #ffffff;
+  color: #111827;
+  border: 2px solid #d1d5db;
+}
+
+.cta-button.secondary:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.cta-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================
+   MOBILE DROPDOWN - PROFESSIONAL STYLE
+   ============================================ */
+
+.mobile-tabs-dropdown {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.mobile-tabs-dropdown label {
+  display: block;
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.professional-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+/* Dropdown Trigger Button */
+.dropdown-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Zist', 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.dropdown-trigger:active {
+  transform: scale(0.98);
+}
+
+.trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.trigger-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FDB813 0%, #f59e0b 100%);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(253, 184, 19, 0.25);
+}
+
+.trigger-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.trigger-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trigger-category {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-arrow {
+  flex-shrink: 0;
+  color: #9ca3af;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 6px;
+  max-height: 380px;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  transform-origin: top;
+}
+
+/* Dropdown Options */
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+  font-family: 'Zist', 'Inter', sans-serif;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-bottom: 4px;
+}
+
+.dropdown-option:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-option:hover {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.dropdown-option.active {
+  background: linear-gradient(135deg, #fff3e0 0%, #fef3c7 100%);
+  border-color: #FDB813;
+}
+
+.dropdown-option .option-number {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.dropdown-option.active .option-number {
+  background: linear-gradient(135deg, #FDB813 0%, #f59e0b 100%);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(253, 184, 19, 0.25);
+}
+
+.dropdown-option .option-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.dropdown-option .option-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-option .option-category {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-option.active .option-category {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  opacity: 0;
+  animation: checkFadeIn 0.3s ease forwards;
+}
+
+@keyframes checkFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar styling for dropdown menu */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f9fafb;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #FDB813;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #e5a80f;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .vertical-tabs-container {
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+  }
+
+  .vertical-tabs-sidebar {
+    padding: 20px;
+  }
+
+  .tab-content-area {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-tabs-container {
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+  }
+
+  .machine-title {
+    font-size: 30px;
+  }
+
+  .machine-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image {
+    max-width: 700px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vertical-tabs-section {
+    padding: 20px 0 60px;
+  }
+
+  .vertical-tabs-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .vertical-tabs-sidebar {
+    display: none;
+  }
+
+  .tab-content-area {
+    padding: 24px;
+  }
+
+  .machine-title {
+    font-size: 26px;
+  }
+
+  .machine-description {
+    font-size: 15px;
+  }
+
+  .machine-details-grid {
+    gap: 16px;
+  }
+
+  .details-card {
+    padding: 20px;
+  }
+
+  .machine-cta {
+    flex-direction: column;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tool-range-accuracy {
+    flex-direction: column;
+  }
+
+  .range-badge,
+  .accuracy-badge {
+    width: 100%;
+  }
+
+  .main-image {
+    max-width: 700px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-content-area {
+    padding: 20px;
+  }
+
+  .machine-title {
+    font-size: 22px;
+  }
+
+  .details-title {
+    font-size: 16px;
+  }
+
+  .spec-label,
+  .spec-value {
+    font-size: 15px;
+  }
+
+  .features-list li,
+  .applications-list li {
+    font-size: 15px;
+  }
+
+  .main-image {
+    max-width: 700px;
+    height: 280px;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tab-content-area {
+  animation: slideInRight 0.4s ease-out;
+}
+
+.vertical-tabs-sidebar {
+  animation: slideInLeft 0.6s ease-out;
+}

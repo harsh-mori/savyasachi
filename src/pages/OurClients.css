@@ -1,0 +1,530 @@
+/* ============================================
+   OUR CLIENTS PAGE - MODERN PROFESSIONAL DESIGN
+   PRIMARY COLOR: #FDB813
+   ============================================ */
+
+.clients-page {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.clients-hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #FDB813, transparent);
+  opacity: 0.5;
+}
+
+.clients-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.clients-hero-label {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+.clients-hero-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FDB813, transparent);
+  border-radius: 2px;
+}
+
+.clients-hero-title {
+  font-size: 2rem; /* Title - Medium */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.highlight-text {
+  color: #FDB813;
+}
+
+.clients-hero-subtitle {
+  font-size: 1.125rem; /* Subtitle - Smallest */
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CONTENT SECTION
+   ============================================ */
+
+.clients-content-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================================
+   INTRODUCTION
+   ============================================ */
+
+.clients-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+}
+
+.section-heading {
+  font-size: 2rem; /* Title - Medium */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+/* ============================================
+   CLIENT SHOWCASE - GRID WITH NAMES
+   ============================================ */
+
+.clients-showcase {
+  margin-bottom: 6rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.client-card:hover {
+  border-color: #FDB813;
+  background: #fafafa;
+}
+
+.client-logo-wrapper {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.client-card:hover .client-logo-wrapper {
+  background: #ffffff;
+}
+
+.client-logo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.client-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ============================================
+   INDUSTRIES SECTION
+   ============================================ */
+
+.industries-section {
+  margin-bottom: 6rem;
+}
+
+.industries-section .section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.sector-card {
+  padding: 1.5rem 1.5rem;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.sector-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.1), rgba(253, 184, 19, 0.05));
+  border-radius: 50%;
+}
+
+.sector-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #FDB813;
+}
+
+.sector-card h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+}
+
+.sector-card p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.why-choose-section {
+  margin-bottom: 6rem;
+}
+
+.why-choose-section .section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.benefit-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.benefit-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FDB813;
+  text-align: center;
+}
+
+.benefit-content h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.benefit-content p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.clients-cta-section {
+  text-align: center;
+  padding: 4rem 3rem;
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.05), rgba(253, 184, 19, 0.02));
+  border: 1.5px solid rgba(253, 184, 19, 0.2);
+  border-radius: 20px;
+}
+
+.cta-heading {
+  font-size: 2rem; /* Title - Medium */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.cta-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: #FDB813;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 2px solid #FDB813;
+  transition: all 0.3s ease;
+}
+
+.cta-button-primary:hover {
+  background: #e5a50f;
+  border-color: #e5a50f;
+}
+
+.cta-button-primary svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-hero {
+    padding: 60px 0 40px;
+  }
+
+  .clients-hero-label {
+    font-size: 2rem;
+  }
+
+  .clients-content-section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .clients-intro {
+    margin-bottom: 3rem;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .clients-showcase {
+    margin-bottom: 4rem;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .client-card {
+    padding: 1.5rem;
+  }
+
+  .client-logo-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .client-name {
+    font-size: 0.9375rem;
+  }
+
+  .sectors-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sector-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .industries-section,
+  .why-choose-section {
+    margin-bottom: 4rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefit-item {
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .benefit-number {
+    font-size: 2.5rem;
+  }
+
+  .clients-cta-section {
+    padding: 3rem 2rem;
+  }
+
+  .cta-heading {
+    font-size: 1.75rem;
+  }
+
+  .cta-description {
+    font-size: 1.0625rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-hero {
+    padding: 50px 0 30px;
+  }
+
+  .clients-hero-label {
+    font-size: 1.75rem;
+  }
+
+  .clients-content-section {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .clients-grid {
+    gap: 1rem;
+  }
+
+  .client-card {
+    padding: 1.25rem;
+  }
+
+  .client-logo-wrapper {
+    padding: 0.75rem;
+  }
+
+  .client-name {
+    font-size: 0.875rem;
+  }
+
+  .sector-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .sector-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .sector-card p {
+    font-size: 0.9375rem;
+  }
+
+  .benefit-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .benefit-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .benefit-content p {
+    font-size: 0.9375rem;
+  }
+
+  .clients-cta-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-heading {
+    font-size: 1.5rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .cta-button-primary {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
