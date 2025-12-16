@@ -4,7 +4,7 @@
 
 .page {
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--bg-primary);
 }
 
 /* ============================================
@@ -14,7 +14,7 @@
 .page-hero {
   position: relative;
   padding: 6rem 2rem 4rem;
-  background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   text-align: center;
 }
 
@@ -26,17 +26,19 @@
 }
 
 .page-title {
-  font-size: 2.75rem; /* Section Label - Largest */
+  font-size: 2.75rem;
+  /* Section Label - Largest */
   font-weight: 800;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
 .page-subtitle {
-  font-size: 1.125rem; /* Subtitle - Smallest */
-  color: #6b7280;
+  font-size: 1.125rem;
+  /* Subtitle - Smallest */
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -49,8 +51,8 @@
 }
 
 .content-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 3rem;
   margin-bottom: 2rem;
@@ -62,21 +64,22 @@
 }
 
 .content-card h2 {
-  font-size: 2rem; /* Title - Medium */
-  color: #FDB813;
+  font-size: 2rem;
+  /* Title - Medium */
+  color: var(--accent-color);
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
 .content-card h3 {
   font-size: 1.625rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 2rem 0 1rem;
   font-weight: 700;
 }
 
 .content-card p {
-  color: #4b5563;
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.125rem;
   margin-bottom: 1rem;
@@ -85,7 +88,7 @@
 .founder-info {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--border-color);
 }
 
 .facility-icon-large {
@@ -136,7 +139,7 @@
   padding: 1rem;
   text-align: center;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -162,13 +165,13 @@
 
 .stat-item h3 {
   font-size: 3rem;
-  color: #FDB813;
+  color: var(--accent-color);
   margin: 0 0 0.5rem 0;
   font-weight: 900;
 }
 
 .stat-item p {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1.0625rem;
   margin: 0;
 }
@@ -180,7 +183,7 @@
 .lead-text {
   font-size: 1.3125rem;
   line-height: 1.8;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-top: 1rem;
 }
 
@@ -194,27 +197,27 @@
 .commitment-item,
 .goal-item {
   padding: 2rem;
-  background: #f9fafb;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .commitment-item:hover,
 .goal-item:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   border-color: rgba(253, 184, 19, 0.3);
 }
 
 .commitment-item h3 {
   margin: 0 0 1rem 0;
   font-size: 1.375rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .commitment-item p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .goal-item {
@@ -227,7 +230,7 @@
 .goal-number {
   font-size: 3rem;
   font-weight: 900;
-  color: #FDB813;
+  color: var(--accent-color);
   text-align: center;
 }
 
@@ -281,18 +284,18 @@
 .timeline-year {
   font-size: 1.375rem;
   font-weight: 700;
-  color: #FDB813;
+  color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
 
 .timeline-content h3 {
   margin: 0 0 1rem 0;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .timeline-content p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .achievements-grid {
@@ -312,14 +315,14 @@
 
 .achievement-item h3 {
   font-size: 2.5rem;
-  color: #FDB813;
+  color: var(--accent-color);
   margin: 0 0 0.5rem 0;
   font-weight: 900;
 }
 
 .achievement-item p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1rem;
 }
 
@@ -355,18 +358,18 @@
 
 .leader-info h2 {
   margin: 0 0 0.5rem 0;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .leader-title {
-  color: #FDB813;
+  color: var(--accent-color);
   font-size: 1.1875rem;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
 }
 
 .leader-experience {
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -379,15 +382,15 @@
 
 .expertise-item {
   padding: 2rem;
-  background: #f9fafb;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .expertise-item:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   border-color: rgba(253, 184, 19, 0.3);
 }
 
@@ -404,17 +407,17 @@
 
 .expertise-item p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1rem;
 }
 
 .founder-message {
   font-size: 1.3125rem;
   font-style: italic;
-  color: #1a1a1a;
+  color: var(--text-primary);
   padding: 2rem;
   background: linear-gradient(135deg, rgba(253, 184, 19, 0.05), rgba(253, 184, 19, 0.02));
-  border-left: 4px solid #FDB813;
+  border-left: 4px solid var(--accent-color);
   border-radius: 8px;
   margin: 2rem 0;
   line-height: 1.8;
@@ -423,7 +426,7 @@
 .signature {
   text-align: right;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-top: 1rem;
 }
 
@@ -440,15 +443,15 @@
 
 .sector-card {
   padding: 2rem;
-  background: #f9fafb;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .sector-card:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   border-color: rgba(253, 184, 19, 0.3);
 }
 
@@ -477,12 +480,12 @@
 .sector-card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.375rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .sector-card p {
   margin: 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 1.125rem;
 }
 
@@ -498,14 +501,14 @@
   gap: 2rem;
   align-items: center;
   padding: 2rem;
-  background: #f9fafb;
+  background: var(--bg-secondary);
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .reason-item:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   border-color: rgba(253, 184, 19, 0.3);
 }
 
@@ -518,7 +521,7 @@
 }
 
 .reason-item:hover .reason-number {
-  color: #FDB813;
+  color: var(--accent-color);
 }
 
 .reason-content h3 {
@@ -542,18 +545,18 @@
   gap: 0.75rem;
   padding: 1rem 2rem;
   background: #FDB813;
-  color: #000000;
+  color: var(--text-primary);
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.125rem;
   margin-top: 1.5rem;
   transition: all 0.3s ease;
-  border: 2px solid #FDB813;
+  border: 2px solid var(--accent-color);
 }
 
 .cta-button:hover {
-  background: #e5a50f;
+  background: var(--bg-card);
   border-color: #e5a50f;
 }
 

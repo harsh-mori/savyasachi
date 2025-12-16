@@ -108,7 +108,6 @@ const CNCMachines = () => {
               >
                 <div className="tabs-header">
                   <h3>Our Machines</h3>
-                  <div className="tabs-count">{machines.length} Units</div>
                 </div>
                 <div className="tabs-list">
                   {machines.map((machine, index) => (
@@ -123,7 +122,7 @@ const CNCMachines = () => {
                         <span className="tab-category">{machine.category}</span>
                       </div>
                       <svg className="tab-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M7 3l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M7 3l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
                   ))}
@@ -160,7 +159,7 @@ const CNCMachines = () => {
                       viewBox="0 0 20 20"
                       fill="none"
                     >
-                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
 
@@ -190,7 +189,7 @@ const CNCMachines = () => {
                             </div>
                             {activeTab === index && (
                               <svg className="check-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                <path d="M15 4.5L6.75 12.75L3 9" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M15 4.5L6.75 12.75L3 9" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
                             )}
                           </button>
@@ -226,31 +225,14 @@ const CNCMachines = () => {
                   </div>
                 </div>
 
-                {/* Specifications */}
+                {/* Key Features and Applications */}
                 <div className="machine-details-grid">
-                  <div className="details-card">
-                    <h3 className="details-title">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                        <path d="M9 3v18M15 3v18M3 9h18M3 15h18"/>
-                      </svg>
-                      Technical Specifications
-                    </h3>
-                    <div className="specs-grid">
-                      {activeMachine.specifications.map((spec, index) => (
-                        <div key={index} className="spec-item">
-                          <span className="spec-label">{spec.label}</span>
-                          <span className="spec-value">{spec.value}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
 
                   <div className="details-card">
                     <h3 className="details-title">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
                       </svg>
                       Key Features
                     </h3>
@@ -258,8 +240,8 @@ const CNCMachines = () => {
                       {activeMachine.features.map((feature, index) => (
                         <li key={index}>
                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <circle cx="8" cy="8" r="6" fill="currentColor" opacity="0.2"/>
-                            <circle cx="8" cy="8" r="3" fill="currentColor"/>
+                            <circle cx="8" cy="8" r="6" fill="currentColor" opacity="0.2" />
+                            <circle cx="8" cy="8" r="3" fill="currentColor" />
                           </svg>
                           {feature}
                         </li>
@@ -270,9 +252,9 @@ const CNCMachines = () => {
                   <div className="details-card">
                     <h3 className="details-title">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                        <line x1="12" y1="22.08" x2="12" y2="12" />
                       </svg>
                       Applications
                     </h3>
@@ -280,7 +262,7 @@ const CNCMachines = () => {
                       {activeMachine.applications.map((application, index) => (
                         <li key={index}>
                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           {application}
                         </li>
@@ -291,22 +273,8 @@ const CNCMachines = () => {
 
               </motion.div>
             </AnimatePresence>
-          </div>
 
-          <motion.div
-            className="back-link-container"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <Link to="/facilities/measurement-tools" className="back-link">
-              View Measurement Tools
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

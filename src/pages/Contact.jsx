@@ -129,8 +129,8 @@ const Contact = () => {
                 >
                   <span>Send Message</span>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="22" y1="2" x2="11" y2="13"/>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
                 </motion.button>
               </form>
@@ -151,7 +151,7 @@ const Contact = () => {
               <div className="google-map-wrapper">
                 <iframe
                   title="Savyasachi Engineering Location"
-                  src="https://www.google.com/maps?q=Global+Industrial+Park,+Rajkot-Gondal+Highway,+Rajkot,+Gujarat,+India&output=embed"
+                  src="https://www.google.com/maps?q=Savyasachi+Engineering,+Street+2,+Near+Kishan+Petrol+Pump,+Rajkot+Gondal+Highway,+Rajkot,+Gujarat+360003,+India&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, borderRadius: '16px' }}
@@ -159,21 +159,6 @@ const Contact = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              </div>
-
-              <div className="map-info-card">
-                <div className="map-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="map-info-title">Business Hours</p>
-                  <p className="map-info-text">Monday - Tuesday: Open 24 hours</p>
-                  <p className="map-info-text">Wednesday: Closed</p>
-                  <p className="map-info-text">Thursday - Sunday: Open 24 hours</p>
-                </div>
               </div>
             </motion.div>
           </div>

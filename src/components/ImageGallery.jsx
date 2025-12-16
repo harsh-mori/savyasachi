@@ -292,22 +292,7 @@ const ImageGallery = ({ images = [] }) => {
                   <span className="btn-label">Close</span>
                 </button>
 
-                <button
-                  className="sidebar-btn sidebar-btn-fullscreen"
-                  onClick={toggleFullscreen}
-                  aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                >
-                  {isFullscreen ? (
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" />
-                    </svg>
-                  ) : (
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
-                    </svg>
-                  )}
-                  <span className="btn-label">{isFullscreen ? 'Exit' : 'Fullscreen'}</span>
-                </button>
+
               </div>
 
               {/* Center - Image & Title */}
@@ -339,22 +324,33 @@ const ImageGallery = ({ images = [] }) => {
                   onTouchEnd={handleTouchEnd}
                 >
                   <AnimatePresence mode="wait">
-                    <motion.img
+                    <motion.div
                       key={currentImageIndex}
-                      src={images[currentImageIndex].src}
-                      alt={images[currentImageIndex].alt || `Image ${currentImageIndex + 1}`}
-                      className="lightbox-image"
-                      style={{
-                        transform: `scale(${zoomLevel}) translate(${panPosition.x / zoomLevel}px, ${panPosition.y / zoomLevel}px)`,
-                        cursor: zoomLevel > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default',
-                      }}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      draggable={false}
-                      onMouseDown={handleMouseDown}
-                    />
+                      style={{ position: 'relative', display: 'inline-block' }}
+                    >
+                      <motion.img
+                        src={images[currentImageIndex].src}
+                        alt={images[currentImageIndex].alt || `Image ${currentImageIndex + 1}`}
+                        className="lightbox-image"
+                        draggable={false}
+                        onMouseDown={(e) => e.preventDefault()}
+                        onContextMenu={(e) => e.preventDefault()}
+                      />
+                      {/* Internal Image Watermark */}
+                      <div className="watermark-overlay" style={{ top: 0, left: 0, width: '100%', height: '100%', transform: 'none', background: 'transparent' }}>
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <div key={i} className="watermark-row" style={{ opacity: 0.4 }}> {/* Higher opacity for internal image watermark */}
+                            {Array.from({ length: 3 }).map((_, j) => (
+                              <span key={j} className="watermark-text" style={{ fontSize: '14px', padding: '20px', whiteSpace: 'nowrap', transform: 'rotate(-30deg)', display: 'block' }}>Savyasachi Engineering</span>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
                   </AnimatePresence>
                 </div>
               </div>
@@ -377,46 +373,7 @@ const ImageGallery = ({ images = [] }) => {
                 </div>
 
                 <div className="lightbox-controls-center">
-                  <button
-                    className="sidebar-btn sidebar-btn-zoom"
-                    onClick={zoomOut}
-                    disabled={zoomLevel <= 1}
-                    aria-label="Zoom out"
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="M21 21l-4.35-4.35" />
-                      <line x1="8" y1="11" x2="14" y2="11" />
-                    </svg>
-                    <span className="btn-label">Zoom Out</span>
-                  </button>
 
-                  <button
-                    className="sidebar-btn sidebar-btn-reset"
-                    onClick={resetZoom}
-                    aria-label="Reset zoom"
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M1 4v6h6M23 20v-6h-6" />
-                      <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15" />
-                    </svg>
-                    <span className="btn-label">Reset</span>
-                  </button>
-
-                  <button
-                    className="sidebar-btn sidebar-btn-zoom"
-                    onClick={zoomIn}
-                    disabled={zoomLevel >= 3}
-                    aria-label="Zoom in"
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="M21 21l-4.35-4.35" />
-                      <line x1="11" y1="8" x2="11" y2="14" />
-                      <line x1="8" y1="11" x2="14" y2="11" />
-                    </svg>
-                    <span className="btn-label">Zoom In</span>
-                  </button>
                 </div>
 
                 <div className="lightbox-controls-right">

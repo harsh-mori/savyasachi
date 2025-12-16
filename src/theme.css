@@ -1,0 +1,78 @@
+/* =============================================================================
+   CENTRALIZED THEME CONFIGURATION
+   All color variables for Light and Dark modes are managed here.
+   ============================================================================= */
+
+:root {
+    /* --- LIGHT MODE (Default) --- */
+
+    /* Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    /* Light gray for sections */
+    --bg-tertiary: #f3f4f6;
+    /* Slightly darker gray */
+    --bg-card: #ffffff;
+    /* Card background */
+    --bg-overlay: rgba(255, 255, 255, 0.9);
+
+    /* Text */
+    --text-primary: #1a1a1a;
+    /* Main titles, body text */
+    --text-secondary: #4b5563;
+    /* Subtitles, descriptions */
+    --text-tertiary: #9ca3af;
+    /* Placeholders, disabled text */
+    --text-inverse: #ffffff;
+    /* Text on dark backgrounds */
+
+    /* Borders & Dividers */
+    --border-color: #e5e7eb;
+    --border-focus: #FDB813;
+
+    /* Accents */
+    --accent-color: #FDB813;
+    /* Main Brand Color (Yellow/Gold) */
+    --accent-hover: #e5a00d;
+    --accent-light: rgba(253, 184, 19, 0.1);
+
+    /* Components */
+    --btn-primary-bg: #FDB813;
+    --btn-primary-text: #000000;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* --- DARK MODE OVERRIDES --- */
+body.dark-mode {
+    /* Backgrounds */
+    --bg-primary: #14181a;
+    /* User requested #14181a */
+    --bg-secondary: #1c2124;
+    /* Slightly lighter for sections */
+    --bg-tertiary: #252b30;
+    /* Even lighter for hover/inputs */
+    --bg-card: #1c2124;
+    /* Card background matching secondary */
+    --bg-overlay: rgba(20, 24, 26, 0.95);
+
+    /* Text */
+    --text-primary: #ffffff;
+    /* Pure white for best contrast on dark */
+    --text-secondary: #d1d5db;
+    /* Light gray */
+    --text-tertiary: #9ca3af;
+    --text-inverse: #000000;
+
+    /* Borders & Dividers */
+    --border-color: #2f363d;
+    /* Subtle border */
+
+    /* Accents */
+    --accent-color: #FDB813;
+    /* Keep brand identity */
+    --accent-hover: #e5a00d;
+    --accent-light: rgba(253, 184, 19, 0.15);
+
+    /* Components */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}

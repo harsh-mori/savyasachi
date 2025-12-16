@@ -77,13 +77,13 @@ body {
    ============================================ */
 
 ::selection {
-  background: rgba(253, 184, 19, 0.3);
-  color: #1a1a1a;
+  background: rgba(253, 184, 19, 0.4);
+  color: var(--text-primary);
 }
 
 ::-moz-selection {
-  background: rgba(253, 184, 19, 0.3);
-  color: #1a1a1a;
+  background: rgba(253, 184, 19, 0.4);
+  color: var(--text-primary);
 }
 
 /* ============================================

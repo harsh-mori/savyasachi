@@ -69,12 +69,6 @@ export const siteData = {
           description: "Advanced CNC machining centers",
           icon: "wrench",
           path: "/facilities/cnc-machines"
-        },
-        {
-          title: "Measurement Tools",
-          description: "High-precision measurement equipment",
-          icon: "ruler",
-          path: "/facilities/measurement-tools"
         }
       ]
     },
@@ -147,8 +141,8 @@ export const siteData = {
     industries: [
       "Aerospace",
       "Defense",
-      "Automotive",
-      "Locomotive Valves",
+      "General Engineering",
+      "Automobile and Components",
       "Precision Fittings",
     ],
     mission: {
@@ -203,19 +197,19 @@ export const siteData = {
   facilities: [
     {
       id: 1,
+      title: "CNC Centers",
+      icon: "🤖",
+      description:
+        "CNC Turning, Milling and Grinding Centers with advanced computer numerical control systems.",
+      image: "/machines/all-machines.png",
+    },
+    {
+      id: 2,
       title: "Measuring Tools",
       icon: "📏",
       description:
         "Extensive range of high-precision measuring tools with all required instruments for quality assurance.",
       image: "/images/measurement-tools/micrometer.png",
-    },
-    {
-      id: 2,
-      title: "CNC Centers",
-      icon: "🤖",
-      description:
-        "CNC Turning, Milling and Grinding Centers with advanced computer numerical control systems.",
-      image: "/images/facilities/cnc-centers.png",
     },
     {
       id: 3,

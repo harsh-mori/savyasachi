@@ -5,7 +5,7 @@
 
 .about-page-new {
   min-height: 100vh;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 /* ============================================
@@ -14,8 +14,8 @@
 
 .about-hero {
   padding: 80px 0 60px;
-  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  border-bottom: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
 }
@@ -42,7 +42,7 @@
 .about-hero-label {
   font-size: 2.75rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
@@ -63,26 +63,29 @@
 }
 
 .about-hero-title {
-  font-size: 2rem; /* Title - Medium */
+  font-size: 2rem;
+  /* Title - Medium */
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   line-height: 1.4;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.01em;
 }
 
 .about-hero-title .highlight-text {
-  color: #FDB813;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
 .about-hero-description {
-  font-size: 1.125rem; /* Subtitle - Smallest */
+  font-size: 1.125rem;
+  /* Subtitle - Smallest */
   font-weight: 400;
-  color: #6b7280;
+  color: var(--text-primary);
   line-height: 1.6;
   margin: 0;
   letter-spacing: 0.01em;
+  text-transform: capitalize;
 }
 
 /* ============================================
@@ -91,7 +94,7 @@
 
 .company-overview {
   padding: 60px 0;
-  background: #ffffff;
+  background: var(--bg-card);
 }
 
 .overview-grid {
@@ -114,7 +117,8 @@
   left: -10px;
   right: 10px;
   bottom: 10px;
-  /* border: 2px solid rgba(253, 184, 19, 0.2); */ /* Removed for clean design */
+  /* border: 2px solid rgba(253, 184, 19, 0.2); */
+  /* Removed for clean design */
   border-radius: 8px;
   pointer-events: none;
   z-index: 0;
@@ -126,7 +130,8 @@
   min-height: 500px;
   object-fit: cover;
   border-radius: 8px;
-  /* border: 3px solid #e5e7eb; */ /* Removed for clean design */
+  /* border: 3px solid #e5e7eb; */
+  /* Removed for clean design */
   position: relative;
   z-index: 1;
   transition: border-color 0.3s ease;
@@ -140,7 +145,8 @@
   background: #FDB813;
   padding: 1.5rem 2rem;
   border-radius: 16px;
-  /* border: 2px solid rgba(0, 0, 0, 0.1); */ /* Removed for clean design */
+  /* border: 2px solid rgba(0, 0, 0, 0.1); */
+  /* Removed for clean design */
 }
 
 .badge-year {
@@ -168,9 +174,10 @@
 }
 
 .overview-title {
-  font-size: 2rem; /* Title - Medium */
+  font-size: 2rem;
+  /* Title - Medium */
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
 }
@@ -178,12 +185,12 @@
 .overview-text {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .overview-text strong {
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -191,7 +198,7 @@
 .overview-text:first-of-type::first-letter {
   font-size: 4rem;
   font-weight: 800;
-  color: #FDB813;
+  color: var(--accent-color);
   float: left;
   line-height: 0.85;
   margin-right: 0.5rem;
@@ -202,13 +209,13 @@
 .industries-section {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
-  border-top: 2px solid #e5e7eb;
+  border-top: 2px solid var(--border-color);
 }
 
 .industries-heading {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -217,7 +224,7 @@
 .industries-text {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--text-primary);
   font-weight: 500;
   margin: 0;
 }
@@ -228,9 +235,9 @@
 
 .stats-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
-  border-top: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
 }
@@ -261,7 +268,7 @@
 .stat-card {
   text-align: center;
   padding: 3rem 2rem;
-  background: #ffffff;
+  background: var(--bg-card);
   border: 2px solid transparent;
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -310,7 +317,7 @@
 }
 
 .stat-card:hover {
-  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   border-color: transparent;
 }
 
@@ -340,7 +347,7 @@
 .stat-label {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   line-height: 1.5;
@@ -355,7 +362,7 @@
 
 .mission-section {
   padding: 60px 0;
-  background: #ffffff;
+  background: var(--bg-card);
 }
 
 .mission-content {
@@ -367,7 +374,7 @@
 .section-label {
   font-size: 2.75rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
@@ -388,20 +395,25 @@
 }
 
 .section-title {
-  font-size: 2rem; /* Title - Medium */
+  font-size: 2rem;
+  /* Title - Medium */
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
+  line-height: 1.4;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.01em;
 }
 
 .section-subtitle {
-  font-size: 1.125rem; /* Subtitle - Smallest */
+  font-size: 1.125rem;
+  /* Subtitle - Smallest */
   font-weight: 400;
-  color: #6b7280;
-  line-height: 1.7;
+  color: var(--text-primary);
+  line-height: 1.6;
   margin: 0 auto 3rem auto;
   max-width: 900px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
 }
 
 .mission-grid {
@@ -416,8 +428,8 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2rem 2.25rem;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   text-align: left;
 }
@@ -446,7 +458,7 @@
 .mission-text h3 {
   font-size: 1.3125rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.75rem 0;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -455,7 +467,7 @@
 .mission-text p {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -465,7 +477,7 @@
 
 .vision-section {
   padding: 60px 0 100px;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 .vision-content {
@@ -486,8 +498,8 @@
   align-items: flex-start;
   gap: 1.5rem;
   padding: 2rem 2.25rem;
-  background: #ffffff;
-  border: 2px solid #e5e7eb;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   text-align: left;
 }
@@ -516,7 +528,7 @@
 .vision-text h3 {
   font-size: 1.3125rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.75rem 0;
   letter-spacing: -0.01em;
   line-height: 1.3;
@@ -525,7 +537,7 @@
 .vision-text p {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--text-primary);
   margin: 0;
 }
 

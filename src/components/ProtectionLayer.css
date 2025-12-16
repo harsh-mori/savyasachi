@@ -1,0 +1,65 @@
+/* Container to hold content + absolute watermark */
+.protection-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* The Overlay that sits ON TOP of content but allows clicks through */
+.watermark-overlay {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    /* Make it larger to cover rotations */
+    height: 200%;
+    pointer-events: none;
+    /* Allows user to click buttons/links underneath */
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: rotate(-30deg);
+    opacity: 0.04;
+    /* Visible but not overwhelming */
+    overflow: hidden;
+    user-select: none;
+}
+
+/* Individual rows/text */
+.watermark-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.watermark-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    padding: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Dark mode - make watermark even more subtle */
+body.dark-mode .watermark-overlay {
+    opacity: 0.03;
+}
+
+/* Content Protection */
+.protected-content {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Hide watermarks on small screens if they clog the view too much */
+@media (max-width: 768px) {
+    .watermark-text {
+        font-size: 14px;
+        padding: 20px;
+    }
+}

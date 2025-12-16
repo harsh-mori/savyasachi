@@ -3,7 +3,7 @@
    ============================================ */
 
 .home-new {
-  background: #ffffff;
+  background: var(--bg-primary);
 }
 
 .container {
@@ -70,12 +70,10 @@
   background:
     radial-gradient(circle at 20% 50%, rgba(253, 184, 19, 0.12) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       rgba(0, 0, 0, 0.5) 0%,
       rgba(26, 26, 26, 0.65) 50%,
-      rgba(0, 0, 0, 0.75) 100%
-    );
+      rgba(0, 0, 0, 0.75) 100%);
   z-index: 2;
 }
 
@@ -133,22 +131,29 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
+
   33% {
     transform: translate(40px, -40px) scale(1.15) rotate(120deg);
   }
+
   66% {
     transform: translate(-30px, 30px) scale(0.85) rotate(240deg);
   }
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.2;
     filter: blur(80px);
   }
+
   50% {
     opacity: 0.35;
     filter: blur(100px);
@@ -196,10 +201,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.2);
     opacity: 0.8;
@@ -235,22 +243,7 @@
   text-shadow: 0 2px 20px rgba(253, 184, 19, 0.5);
 }
 
-.title-highlight::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    #FDB813 20%,
-    #FDB813 80%,
-    transparent 100%
-  );
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(253, 184, 19, 0.6);
-}
+/* REMOVED: .title-highlight::after underline - Titles should NOT have underlines, only Section Labels */
 
 /* "Solutions for Excellence" - Lighter white text */
 .title-secondary {
@@ -271,6 +264,7 @@
   margin-right: auto;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 .hero-actions {
@@ -416,9 +410,12 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(10px);
   }
@@ -458,7 +455,7 @@ section {
    ============================================ */
 
 .about-section {
-  background: #ffffff;
+  background: var(--bg-primary);
   padding: 8rem 0;
 }
 
@@ -476,11 +473,12 @@ section {
 .section-label {
   font-size: 2.75rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
   display: inline-block;
+  letter-spacing: -0.02em;
 }
 
 .section-label::after {
@@ -496,16 +494,17 @@ section {
 }
 
 .section-title-modern {
-  font-size: 2rem; /* Title - Medium */
-  font-weight: 700;
-  color: #1a1a1a;
+  font-size: 2rem;
+  /* Title - Medium */
+  font-weight: 600;
+  color: var(--text-primary);
   line-height: 1.4;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   letter-spacing: -0.01em;
 }
 
 .highlight-text {
-  color: #FDB813;
+  color: var(--accent-color);
   position: relative;
   display: inline-block;
   font-size: inherit;
@@ -513,13 +512,15 @@ section {
 }
 
 .subtitle-text {
-  font-size: 1.125rem; /* Subtitle - Smallest */
+  font-size: 1.125rem;
+  /* Subtitle - Smallest */
   font-weight: 400;
-  color: #6b7280;
+  color: var(--text-secondary);
   display: block;
   margin: 0 auto;
   max-width: 700px;
   line-height: 1.6;
+  text-transform: capitalize;
 }
 
 /* ============================================
@@ -533,6 +534,8 @@ section {
   align-items: stretch;
   min-height: 600px;
 }
+
+
 
 .about-image-column {
   display: flex;
@@ -556,10 +559,11 @@ section {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); */ /* REMOVED - User hates box shadows on images */
+  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); */
+  /* REMOVED - User hates box shadows on images */
   height: 100%;
   width: 100%;
-  background: #fafafa;
+  background: var(--bg-secondary);
 }
 
 .about-image {
@@ -567,7 +571,7 @@ section {
   height: 500px;
   display: block;
   object-fit: contain;
-  background: #fafafa;
+  background: var(--bg-secondary);
   padding: 2rem;
 }
 
@@ -582,18 +586,19 @@ section {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-card);
   backdrop-filter: blur(10px);
   padding: 1.25rem 1.75rem;
   border-radius: 12px;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */ /* REMOVED - User hates box shadows on images */
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+  /* REMOVED - User hates box shadows on images */
 }
 
 .badge-number {
   display: block;
   font-size: 2rem;
   font-weight: 900;
-  color: #FDB813;
+  color: var(--accent-color);
   line-height: 1;
   margin-bottom: 0.25rem;
 }
@@ -602,7 +607,7 @@ section {
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -614,7 +619,7 @@ section {
 .intro-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.75rem 0;
   letter-spacing: -0.01em;
 }
@@ -635,17 +640,17 @@ section {
 .about-description p {
   font-size: 1.0625rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .about-description strong {
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .founder-link {
-  color: #1a1a1a;
+  color: var(--text-primary);
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
@@ -668,7 +673,7 @@ section {
 .industries-title {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 1.25rem 0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -690,7 +695,7 @@ section {
   border-radius: 8px;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -720,8 +725,8 @@ section {
   align-items: center;
   text-align: center;
   padding: 1.25rem 1rem;
-  background: linear-gradient(135deg, #ffffff, #fafafa);
-  border: 2px solid #e5e7eb;
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary));
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -748,7 +753,7 @@ section {
 .industry-card:hover {
   border-color: rgba(253, 184, 19, 0.4);
   box-shadow: 0 12px 40px rgba(253, 184, 19, 0.15);
-  background: linear-gradient(135deg, #ffffff, rgba(253, 184, 19, 0.02));
+  background: linear-gradient(135deg, var(--bg-card), rgba(253, 184, 19, 0.02));
 }
 
 .industry-icon-wrapper {
@@ -771,7 +776,7 @@ section {
 .industry-icon {
   width: 24px;
   height: 24px;
-  color: #1a1a1a;
+  color: var(--text-primary);
   transition: all 0.4s ease;
 }
 
@@ -783,7 +788,7 @@ section {
 .industry-name {
   font-size: 1.0625rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.375rem 0;
   letter-spacing: -0.01em;
   transition: color 0.3s ease;
@@ -795,7 +800,7 @@ section {
 
 .industry-desc {
   font-size: 0.9375rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 0;
   line-height: 1.4;
   transition: color 0.3s ease;
@@ -817,8 +822,8 @@ section {
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 1.25rem;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -840,7 +845,7 @@ section {
 .badge-name {
   font-size: 1.125rem;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .about-cta {
@@ -863,7 +868,7 @@ section {
 .about-text p {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--text-secondary);
 }
 
 .industries-grid {
@@ -875,11 +880,11 @@ section {
 
 .industry-badge {
   padding: 0.875rem 1.75rem;
-  background: #f3f4f6;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-size: 0.95rem;
   transition: all 0.2s ease;
 }
@@ -895,7 +900,7 @@ section {
    ============================================ */
 
 .services-section {
-  background: #fafafa;
+  background: var(--bg-secondary);
   padding: 8rem 0;
 }
 
@@ -908,10 +913,10 @@ section {
 }
 
 .service-card {
-  background: #ffffff;
+  background: var(--bg-card);
   padding: 2.5rem;
   border-radius: 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
@@ -929,12 +934,12 @@ section {
 .service-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .service-description {
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.7;
   margin-bottom: 1.5rem;
   font-size: 1.0625rem;
@@ -948,7 +953,7 @@ section {
 }
 
 .service-features li {
-  color: #4b5563;
+  color: var(--text-secondary);
   font-size: 1rem;
   padding-left: 1.75rem;
   position: relative;
@@ -969,7 +974,7 @@ section {
    ============================================ */
 
 .facilities-section {
-  background: #ffffff;
+  background: var(--bg-card);
   padding: 8rem 0;
   position: relative;
 }
@@ -990,6 +995,10 @@ section {
   border-right: 2px solid #e5e7eb;
 }
 
+body.dark-mode .facilities-tabs {
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
 .facility-tab {
   padding: 1.75rem 2rem;
   background: transparent;
@@ -1000,9 +1009,13 @@ section {
   font-family: 'Zist', 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #1a1a1a !important;
+  color: var(--text-primary);
   position: relative;
   border-bottom: 1px solid #e5e7eb;
+}
+
+body.dark-mode .facility-tab {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 .facility-tab:last-child {
@@ -1010,7 +1023,7 @@ section {
 }
 
 .facility-tab.active {
-  color: #000000 !important;
+  color: var(--text-primary) !important;
   background: rgba(253, 184, 19, 0.05);
   border-left-color: #FDB813;
   font-weight: 700;
@@ -1020,13 +1033,18 @@ section {
 .facility-content-area {
   position: relative;
   padding: 3rem;
-  background: #ffffff;
+  background: var(--bg-card);
   border: 1px solid #e5e7eb;
+
   border-radius: 20px !important;
   overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+body.dark-mode .facility-content-area {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .facility-content-area::before,
@@ -1060,9 +1078,10 @@ section {
 
 .facility-title {
   font-family: 'Zist', 'Inter', sans-serif;
-  font-size: 2rem; /* Title - Medium */
+  font-size: 2rem;
+  /* Title - Medium */
   font-weight: 800;
-  color: #000000 !important;
+  color: var(--text-primary) !important;
   margin: 0;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -1070,7 +1089,7 @@ section {
 
 .facility-description {
   font-family: 'Zist', 'Inter', sans-serif;
-  color: #4b5563;
+  color: var(--text-secondary);
   font-size: 1.125rem;
   line-height: 1.8;
   margin: 0;
@@ -1084,8 +1103,8 @@ section {
   max-width: 700px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
-  background: #fafafa;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
   margin: 0 auto;
   padding-bottom: 0;
 }
@@ -1097,7 +1116,7 @@ section {
   display: block;
   object-fit: contain;
   border-radius: 10px;
-  background: #fafafa;
+  background: var(--bg-secondary);
   padding: 1.5rem;
 }
 
@@ -1163,7 +1182,7 @@ section {
    ============================================ */
 
 .clients-section {
-  background: #ffffff;
+  background: var(--bg-card);
   padding: 8rem 0;
   overflow: hidden;
   position: relative;
@@ -1184,9 +1203,10 @@ section {
 /* Client Logo Card - Simple & Bold Design */
 .client-logo-card {
   aspect-ratio: 16/9;
-  background: #ffffff;
+  background: var(--bg-card);
   border-radius: 20px;
   border: 1px solid #e8e8e8;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1195,6 +1215,10 @@ section {
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
+}
+
+body.dark-mode .client-logo-card {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .client-logo-card:hover {
@@ -1271,12 +1295,12 @@ section {
 }
 
 .cta-btn.primary {
-  background: #ffffff;
+  background: var(--bg-card);
   color: #FDB813;
 }
 
 .cta-btn.primary:hover {
-  background: #f3f4f6;
+  background: var(--bg-tertiary);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -1315,10 +1339,7 @@ section {
     font-size: inherit;
   }
 
-  .title-highlight::after {
-    bottom: -3px;
-    height: 2px;
-  }
+  /* REMOVED: .title-highlight::after - Titles should NOT have underlines */
 
   .hero-subtitle {
     font-size: 1.0625rem;
@@ -1442,12 +1463,10 @@ section {
     background:
       radial-gradient(circle at 20% 50%, rgba(253, 184, 19, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.07) 0%, transparent 50%),
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         rgba(0, 0, 0, 0.7) 0%,
         rgba(26, 26, 26, 0.8) 50%,
-        rgba(0, 0, 0, 0.85) 100%
-      );
+        rgba(0, 0, 0, 0.85) 100%);
   }
 
   .hero-container {
@@ -1475,10 +1494,7 @@ section {
     display: inline;
   }
 
-  .title-highlight::after {
-    bottom: -2px;
-    height: 2px;
-  }
+  /* REMOVED: .title-highlight::after - Titles should NOT have underlines */
 
   .hero-subtitle {
     font-size: 1.125rem;
@@ -1869,12 +1885,10 @@ section {
     background:
       radial-gradient(circle at 20% 50%, rgba(253, 184, 19, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         rgba(0, 0, 0, 0.75) 0%,
         rgba(26, 26, 26, 0.85) 50%,
-        rgba(0, 0, 0, 0.9) 100%
-      );
+        rgba(0, 0, 0, 0.9) 100%);
   }
 
   .hero-container {
@@ -1898,10 +1912,7 @@ section {
     font-size: inherit;
   }
 
-  .title-highlight::after {
-    bottom: -2px;
-    height: 2px;
-  }
+  /* REMOVED: .title-highlight::after - Titles should NOT have underlines */
 
   .hero-subtitle {
     font-size: 1rem;

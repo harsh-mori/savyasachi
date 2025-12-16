@@ -3,15 +3,15 @@
    ============================================ */
 
 .facilities-detail-page {
-  background: #ffffff;
+  background: var(--bg-card);
   min-height: 100vh;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-  background: #ffffff;
+  background: var(--bg-card);
   padding: 1.5rem 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 80px;
   z-index: 100;
@@ -59,29 +59,29 @@ body.lightbox-open .back-link {
 }
 
 .breadcrumb a {
-  color: #6b7280;
+  color: var(--text-primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .breadcrumb a:hover {
-  color: #FDB813;
+  color: var(--accent-color);
 }
 
 .breadcrumb .separator {
-  color: #d1d5db;
+  color: var(--text-primary);
 }
 
 .breadcrumb .current {
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 /* Hero Section */
 .detail-hero {
   padding: 80px 0 60px;
-  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  border-bottom: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -98,9 +98,10 @@ body.lightbox-open .back-link {
 /* Section Label - Largest */
 .cnc-hero-label,
 .measurement-hero-label {
-  font-size: 2.75rem;  /* Section Label - Largest */
+  font-size: 2.75rem;
+  /* Section Label - Largest */
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.75rem;
@@ -123,27 +124,30 @@ body.lightbox-open .back-link {
 
 /* Title - Medium */
 .detail-hero-title {
-  font-size: 2rem;  /* Title - Medium, smaller than Section Label */
+  font-size: 2rem;
+  /* Title - Medium, smaller than Section Label */
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   line-height: 1.3;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.01em;
 }
 
 .detail-hero-title .highlight-text {
-  color: #FDB813;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
 /* Subtitle - Smallest */
 .detail-hero-subtitle {
-  font-size: 1.125rem;  /* Subtitle - Smallest, smaller than Title */
+  font-size: 1.125rem;
+  /* Subtitle - Smallest, smaller than Title */
   font-weight: 400;
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
   letter-spacing: 0.01em;
+  text-transform: capitalize;
 }
 
 /* ============================================
@@ -152,7 +156,7 @@ body.lightbox-open .back-link {
 
 .machines-section {
   padding: 60px 0 100px;
-  background: #ffffff;
+  background: var(--bg-card);
 }
 
 .machines-grid {
@@ -163,17 +167,19 @@ body.lightbox-open .back-link {
 }
 
 .machine-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
-  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); */ /* REMOVED - User hates box shadows on images */
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); */
+  /* REMOVED - User hates box shadows on images */
 }
 
 .machine-card:hover {
   transform: translateY(-8px);
-  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); */ /* REMOVED - User hates box shadows on images */
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); */
+  /* REMOVED - User hates box shadows on images */
   border-color: rgba(253, 184, 19, 0.3);
 }
 
@@ -182,7 +188,7 @@ body.lightbox-open .back-link {
   max-width: 700px;
   height: 500px;
   overflow: hidden;
-  background: #fafafa;
+  background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,9 +215,10 @@ body.lightbox-open .back-link {
 /* Machine/Tool Name - Title level */
 .machine-name {
   font-family: 'Zist', 'Inter', sans-serif;
-  font-size: 2rem;  /* Title - Card title level */
+  font-size: 2rem;
+  /* Title - Card title level */
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 1.25rem 0;
   letter-spacing: -0.01em;
 }
@@ -228,8 +235,8 @@ body.lightbox-open .back-link {
   gap: 0.75rem;
   padding: 0.75rem 0;
   font-size: 1rem;
-  color: #6b7280;
-  border-bottom: 1px solid #f3f4f6;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
 }
 
 .machine-specs li:last-child {
@@ -237,7 +244,7 @@ body.lightbox-open .back-link {
 }
 
 .spec-icon {
-  color: #FDB813;
+  color: var(--accent-color);
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -248,7 +255,7 @@ body.lightbox-open .back-link {
 
 .tools-section {
   padding: 60px 0 100px;
-  background: #ffffff;
+  background: var(--bg-card);
 }
 
 .tools-list {
@@ -262,8 +269,8 @@ body.lightbox-open .back-link {
   gap: 2rem;
   align-items: center;
   padding: 2rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   margin-bottom: 1.5rem;
   transition: all 0.3s ease;
@@ -271,7 +278,8 @@ body.lightbox-open .back-link {
 
 .tool-item:hover {
   transform: translateX(10px);
-  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */ /* REMOVED - User hates box shadows on images */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */
+  /* REMOVED - User hates box shadows on images */
   border-color: rgba(253, 184, 19, 0.3);
 }
 
@@ -279,7 +287,7 @@ body.lightbox-open .back-link {
   font-family: 'Zist', 'Inter', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #FDB813;
+  color: var(--accent-color);
   line-height: 1;
 }
 
@@ -288,7 +296,7 @@ body.lightbox-open .back-link {
   height: 120px;
   border-radius: 10px;
   overflow: hidden;
-  background: #f8f9fa;
+  background: var(--bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -309,16 +317,17 @@ body.lightbox-open .back-link {
 /* Tool Name - Subtitle level */
 .tool-name {
   font-family: 'Zist', 'Inter', sans-serif;
-  font-size: 1.125rem;  /* Subtitle - Supporting text */
+  font-size: 1.125rem;
+  /* Subtitle - Supporting text */
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.01em;
 }
 
 .tool-range {
   font-size: 1rem;
-  color: #6b7280;
+  color: var(--text-secondary);
   margin: 0;
 }
 
@@ -338,10 +347,10 @@ body.lightbox-open .back-link {
   align-items: center;
   gap: 0.75rem;
   padding: 16px 32px;
-  background: #f8f9fa;
-  border: 2px solid #e5e7eb;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-family: 'Zist', 'Inter', sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
@@ -350,9 +359,9 @@ body.lightbox-open .back-link {
 }
 
 .back-link:hover {
-  background: #ffffff;
+  background: var(--bg-card);
   border-color: #FDB813;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .back-link svg {
@@ -402,17 +411,20 @@ body.lightbox-open .back-link {
   /* Maintain hierarchy on tablet */
   .cnc-hero-label,
   .measurement-hero-label {
-    font-size: 2rem;  /* Section Label - Still largest */
+    font-size: 2rem;
+    /* Section Label - Still largest */
     margin-bottom: 1.25rem;
   }
 
   .detail-hero-title {
-    font-size: 1.75rem;  /* Title - Medium, smaller than label */
+    font-size: 1.75rem;
+    /* Title - Medium, smaller than label */
     margin-bottom: 1.25rem;
   }
 
   .detail-hero-subtitle {
-    font-size: 1.0625rem;  /* Subtitle - Still smallest */
+    font-size: 1.0625rem;
+    /* Subtitle - Still smallest */
   }
 
   .machines-section,
@@ -430,7 +442,8 @@ body.lightbox-open .back-link {
   }
 
   .machine-name {
-    font-size: 1.75rem;  /* Title - Maintains hierarchy */
+    font-size: 1.75rem;
+    /* Title - Maintains hierarchy */
   }
 
   .tool-item {
@@ -444,11 +457,13 @@ body.lightbox-open .back-link {
   }
 
   .tool-name {
-    font-size: 1.0625rem;  /* Subtitle - Smaller than machine name */
+    font-size: 1.0625rem;
+    /* Subtitle - Smaller than machine name */
   }
 
   .tool-range {
-    font-size: 1rem;  /* Body text */
+    font-size: 1rem;
+    /* Body text */
   }
 }
 
@@ -468,17 +483,20 @@ body.lightbox-open .back-link {
   /* Maintain hierarchy on mobile */
   .cnc-hero-label,
   .measurement-hero-label {
-    font-size: 1.75rem;  /* Section Label - Largest */
+    font-size: 1.75rem;
+    /* Section Label - Largest */
     margin-bottom: 1rem;
   }
 
   .detail-hero-title {
-    font-size: 1.5rem;  /* Title - Medium */
+    font-size: 1.5rem;
+    /* Title - Medium */
     margin-bottom: 1rem;
   }
 
   .detail-hero-subtitle {
-    font-size: 1rem;  /* Subtitle - Smallest */
+    font-size: 1rem;
+    /* Subtitle - Smallest */
   }
 
   .machine-image {
@@ -503,7 +521,7 @@ body.lightbox-open .back-link {
 /* Product Overview Section */
 .product-overview-section {
   padding: 80px 0;
-  background: #ffffff;
+  background: var(--bg-card);
 }
 
 .overview-content {
@@ -514,32 +532,21 @@ body.lightbox-open .back-link {
 /* Section Title - Follows hierarchy: larger than subtitle, smaller than section label */
 .section-title {
   font-family: 'Zist', 'Inter', sans-serif;
-  font-size: 2.75rem;  /* Section Label - Main section headings */
+  font-size: 2.75rem;
+  /* Section Label - Main section headings */
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 2rem;
   text-align: center;
-  position: relative;
-  padding-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #FDB813, transparent);
-  border-radius: 2px;
-}
+/* REMOVED: .section-title::after underline - Titles should NOT have underlines, only Section Labels */
 
 .overview-paragraph {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   text-align: justify;
 }
@@ -551,7 +558,7 @@ body.lightbox-open .back-link {
 /* Product Gallery Section */
 .product-gallery-section {
   padding: 80px 0;
-  background: #f9fafb;
+  background: var(--bg-secondary);
 }
 
 .product-gallery-section .section-title {
@@ -561,8 +568,8 @@ body.lightbox-open .back-link {
 /* Product Navigation Section */
 .product-navigation {
   padding: 60px 0;
-  background: #ffffff;
-  border-top: 1px solid #e5e7eb;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
 }
 
 .back-link-container {
@@ -582,7 +589,7 @@ body.lightbox-open .back-link {
   background: linear-gradient(135deg, rgba(253, 184, 19, 0.08), rgba(253, 184, 19, 0.04));
   border: 1.5px solid rgba(253, 184, 19, 0.3);
   border-radius: 10px;
-  color: #1a1a1a;
+  color: var(--text-primary);
   font-family: 'Zist', 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -593,23 +600,26 @@ body.lightbox-open .back-link {
 .back-link:hover {
   background: linear-gradient(135deg, rgba(253, 184, 19, 0.15), rgba(253, 184, 19, 0.08));
   border-color: rgba(253, 184, 19, 0.6);
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 /* Responsive for Product Pages */
 @media (max-width: 768px) {
+
   .product-overview-section,
   .product-gallery-section {
     padding: 60px 0;
   }
 
   .section-title {
-    font-size: 2rem;  /* Section Label on tablet */
+    font-size: 2rem;
+    /* Section Label on tablet */
     margin-bottom: 1.5rem;
   }
 
   .overview-paragraph {
-    font-size: 1.0625rem;  /* Body text */
+    font-size: 1.0625rem;
+    /* Body text */
   }
 
   .back-link-container {
@@ -624,23 +634,23 @@ body.lightbox-open .back-link {
 }
 
 @media (max-width: 480px) {
+
   .product-overview-section,
   .product-gallery-section {
     padding: 40px 0;
   }
 
   .section-title {
-    font-size: 1.75rem;  /* Section Label on mobile - Still largest */
+    font-size: 1.75rem;
+    /* Section Label on mobile - Still largest */
     margin-bottom: 1.25rem;
   }
 
-  .section-title::after {
-    width: 60px;
-    height: 3px;
-  }
+  /* REMOVED: .section-title::after responsive - Titles should NOT have underlines */
 
   .overview-paragraph {
-    font-size: 0.9375rem;  /* Body text on mobile */
+    font-size: 0.9375rem;
+    /* Body text on mobile */
     line-height: 1.7;
   }
 

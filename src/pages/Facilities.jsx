@@ -32,19 +32,21 @@ const Facilities = () => {
     {
       title: 'CNC Machining Centers',
       description: 'Advanced computer numerical control systems for high-precision machining needs.',
+      featuresLabel: 'Our CNC Machines',
       features: [
         'Jyoti DX200 5A',
         'Jyoti VMC 1060',
         'Jyoti VMC 850 4th Axis',
         'Jyoti VMC 850 3rd Axis'
       ],
-      image: '/images/facilities/cnc-centers.png',
+      image: '/machines/all-machines.png',
       hasExplore: true,
       explorePath: '/facilities/cnc-machines'
     },
     {
       title: 'Measurement Tools',
       description: 'High-precision measurement equipment for quality assurance.',
+      featuresLabel: 'Our Measurement Tools',
       features: [
         'Digital Vernier Calliper 0-300mm',
         'Micrometer Set Mitutoyo 0-200mm',
@@ -55,12 +57,13 @@ const Facilities = () => {
         'Digital Height Gauge 600mm'
       ],
       image: '/images/measurement-tools/micrometer.png',
-      hasExplore: true,
-      explorePath: '/facilities/measurement-tools'
+      hasExplore: false,
+      explorePath: null
     },
     {
       title: 'Vendor Network',
       description: 'Strong network of vendors for Wire cut, Blackening, and specialized processes.',
+      featuresLabel: 'Key Features',
       features: [
         'Wire Cut EDM Services',
         'Blackening & Heat Treatment',
@@ -103,7 +106,7 @@ const Facilities = () => {
               State-of-the-Art <span className="highlight-text">Equipment</span>
             </h1>
             <p className="facilities-hero-subtitle">
-              ensuring precision and quality
+              Ensuring precision and quality in every product we manufacture
             </p>
           </motion.div>
         </div>
@@ -156,7 +159,7 @@ const Facilities = () => {
                       viewBox="0 0 20 20"
                       fill="none"
                     >
-                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
 
@@ -185,7 +188,7 @@ const Facilities = () => {
                             </div>
                             {activeTab === index && (
                               <svg className="check-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                <path d="M15 4.5L6.75 12.75L3 9" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M15 4.5L6.75 12.75L3 9" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
                             )}
                           </button>
@@ -222,7 +225,7 @@ const Facilities = () => {
                   </p>
 
                   <div className="features-grid">
-                    <h3 className="features-title">Key Features</h3>
+                    <h3 className="features-title">{tabContent[activeTab].featuresLabel}</h3>
                     <div className="features-items">
                       {tabContent[activeTab].features.map((feature, index) => (
                         <div
@@ -230,7 +233,7 @@ const Facilities = () => {
                           className="feature-item"
                         >
                           <svg className="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#FDB813" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                           <span>{feature}</span>
                         </div>
@@ -242,11 +245,10 @@ const Facilities = () => {
                     <Link to={tabContent[activeTab].explorePath} className="explore-more-btn">
                       Explore More
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </Link>
-                  )}
-                </div>
+                  )}                </div>
 
                 {/* Right Side - Image */}
                 <div className="image-column">
