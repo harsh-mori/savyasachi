@@ -42,7 +42,7 @@ const MeetTheLeader = () => {
           >
             <p className="leader-hero-label">Meet the Leader</p>
             <h1 className="leader-hero-title">
-              Mr. <span className="highlight-text">Dharmesh Mori</span>
+              <span className="highlight-text">Dharmesh Mori</span>
             </h1>
             <p className="leader-hero-subtitle">
               Managing Director • 20+ Years of Excellence
