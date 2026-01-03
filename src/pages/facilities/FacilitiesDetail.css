@@ -1,0 +1,678 @@
+/* ============================================
+   FACILITIES DETAIL PAGES STYLES
+   ============================================ */
+
+.facilities-detail-page {
+  background: var(--bg-card);
+  min-height: 100vh;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--bg-card);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 80px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hide breadcrumb when lightbox is open */
+body.lightbox-open .breadcrumb {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide product navigation links when lightbox is open */
+body.lightbox-open .product-navigation {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.lightbox-open .back-link {
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.breadcrumb-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.breadcrumb-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.breadcrumb .container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.0625rem;
+}
+
+.breadcrumb a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-color);
+}
+
+.breadcrumb .separator {
+  color: var(--text-primary);
+}
+
+.breadcrumb .current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Hero Section */
+.detail-hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.detail-hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Label - Largest */
+.cnc-hero-label,
+.measurement-hero-label {
+  font-size: 2.75rem;
+  /* Section Label - Largest */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+.cnc-hero-label::after,
+.measurement-hero-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FDB813, transparent);
+  border-radius: 2px;
+}
+
+/* Title - Medium */
+.detail-hero-title {
+  font-size: 2rem;
+  /* Title - Medium, smaller than Section Label */
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.detail-hero-title .highlight-text {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Subtitle - Smallest */
+.detail-hero-subtitle {
+  font-size: 1.125rem;
+  /* Subtitle - Smallest, smaller than Title */
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+
+/* ============================================
+   CNC MACHINES PAGE
+   ============================================ */
+
+.machines-section {
+  padding: 60px 0 100px;
+  background: var(--bg-card);
+}
+
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.machine-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04); */
+  /* REMOVED - User hates box shadows on images */
+}
+
+.machine-card:hover {
+  transform: translateY(-8px);
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); */
+  /* REMOVED - User hates box shadows on images */
+  border-color: rgba(253, 184, 19, 0.3);
+}
+
+.machine-image {
+  width: 100%;
+  max-width: 700px;
+  height: 500px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.machine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.machine-card:hover .machine-image img {
+  transform: scale(1.05);
+}
+
+.machine-info {
+  padding: 2rem;
+}
+
+/* Machine/Tool Name - Title level */
+.machine-name {
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 2rem;
+  /* Title - Card title level */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.machine-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.machine-specs li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--bg-tertiary);
+}
+
+.machine-specs li:last-child {
+  border-bottom: none;
+}
+
+.spec-icon {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ============================================
+   MEASUREMENT TOOLS PAGE
+   ============================================ */
+
+.tools-section {
+  padding: 60px 0 100px;
+  background: var(--bg-card);
+}
+
+.tools-list {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.tool-item {
+  display: grid;
+  grid-template-columns: 80px 120px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateX(10px);
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */
+  /* REMOVED - User hates box shadows on images */
+  border-color: rgba(253, 184, 19, 0.3);
+}
+
+.tool-number {
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.tool-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tool-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.tool-details {
+  flex: 1;
+}
+
+/* Tool Name - Subtitle level */
+.tool-name {
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 1.125rem;
+  /* Subtitle - Supporting text */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.tool-range {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Back Link */
+.back-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 16px 32px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: var(--bg-card);
+  border-color: #FDB813;
+  color: var(--text-primary);
+}
+
+.back-link svg {
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover svg {
+  transform: translateX(-5px);
+}
+
+.back-link:last-child:hover svg {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .machines-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .machine-image {
+    height: 400px;
+  }
+
+  .tool-item {
+    grid-template-columns: 60px 100px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .tool-number {
+    font-size: 2rem;
+  }
+
+  .tool-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-hero {
+    padding: 60px 0 40px;
+  }
+
+  /* Maintain hierarchy on tablet */
+  .cnc-hero-label,
+  .measurement-hero-label {
+    font-size: 2rem;
+    /* Section Label - Still largest */
+    margin-bottom: 1.25rem;
+  }
+
+  .detail-hero-title {
+    font-size: 1.75rem;
+    /* Title - Medium, smaller than label */
+    margin-bottom: 1.25rem;
+  }
+
+  .detail-hero-subtitle {
+    font-size: 1.0625rem;
+    /* Subtitle - Still smallest */
+  }
+
+  .machines-section,
+  .tools-section {
+    padding: 1rem 0 6rem;
+  }
+
+  .machine-image {
+    max-width: 700px;
+    height: 350px;
+  }
+
+  .machine-info {
+    padding: 1.5rem;
+  }
+
+  .machine-name {
+    font-size: 1.75rem;
+    /* Title - Maintains hierarchy */
+  }
+
+  .tool-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .tool-image {
+    margin: 0 auto;
+  }
+
+  .tool-name {
+    font-size: 1.0625rem;
+    /* Subtitle - Smaller than machine name */
+  }
+
+  .tool-range {
+    font-size: 1rem;
+    /* Body text */
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-hero {
+    padding: 80px 0 50px;
+  }
+
+  .breadcrumb {
+    padding: 1rem 0;
+  }
+
+  .breadcrumb .container {
+    font-size: 1rem;
+  }
+
+  /* Maintain hierarchy on mobile */
+  .cnc-hero-label,
+  .measurement-hero-label {
+    font-size: 1.75rem;
+    /* Section Label - Largest */
+    margin-bottom: 1rem;
+  }
+
+  .detail-hero-title {
+    font-size: 1.5rem;
+    /* Title - Medium */
+    margin-bottom: 1rem;
+  }
+
+  .detail-hero-subtitle {
+    font-size: 1rem;
+    /* Subtitle - Smallest */
+  }
+
+  .machine-image {
+    max-width: 700px;
+    height: 280px;
+  }
+
+  .machine-info {
+    padding: 1.25rem;
+  }
+
+  .back-link {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   PRODUCT DETAIL PAGES
+   ============================================ */
+
+/* Product Overview Section */
+.product-overview-section {
+  padding: 80px 0;
+  background: var(--bg-card);
+}
+
+.overview-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Title - Follows hierarchy: larger than subtitle, smaller than section label */
+.section-title {
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 2.75rem;
+  /* Section Label - Main section headings */
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* REMOVED: .section-title::after underline - Titles should NOT have underlines, only Section Labels */
+
+.overview-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.overview-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Product Gallery Section */
+.product-gallery-section {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.product-gallery-section .section-title {
+  margin-bottom: 3rem;
+}
+
+/* Product Navigation Section */
+.product-navigation {
+  padding: 60px 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+}
+
+.back-link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.08), rgba(253, 184, 19, 0.04));
+  border: 1.5px solid rgba(253, 184, 19, 0.3);
+  border-radius: 20px;
+  color: var(--text-primary);
+  font-family: 'Zist', 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background: linear-gradient(135deg, rgba(253, 184, 19, 0.15), rgba(253, 184, 19, 0.08));
+  border-color: rgba(253, 184, 19, 0.6);
+  color: var(--text-primary);
+}
+
+/* Responsive for Product Pages */
+@media (max-width: 1024px) {
+  .back-link-container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .product-overview-section,
+  .product-gallery-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    /* Section Label on tablet */
+    margin-bottom: 1.5rem;
+  }
+
+  .overview-paragraph {
+    font-size: 1.0625rem;
+    /* Body text */
+  }
+
+  .back-link-container {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .back-link {
+    flex: 1;
+    justify-content: center;
+    padding: 12px 14px;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .product-overview-section,
+  .product-gallery-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    /* Section Label on mobile - Still largest */
+    margin-bottom: 1.25rem;
+  }
+
+  /* REMOVED: .section-title::after responsive - Titles should NOT have underlines */
+
+  .overview-paragraph {
+    font-size: 0.9375rem;
+    /* Body text on mobile */
+    line-height: 1.7;
+  }
+
+  .product-navigation {
+    padding: 40px 0;
+  }
+
+  .back-link {
+    padding: 10px 12px;
+    font-size: 0.8125rem;
+    gap: 0.5rem;
+  }
+}

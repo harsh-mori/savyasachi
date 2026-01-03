@@ -1,0 +1,358 @@
+/* ============================================
+   GLOBAL STYLES & CSS RESET
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   APP CONTAINER
+   ============================================ */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 70px;
+}
+
+.page-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color, #e5e7eb);
+  border-top-color: var(--primary, #FDB813);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a1a1a #f5f5f5;
+}
+
+/* ============================================
+   SELECTION STYLES
+   ============================================ */
+
+::selection {
+  background: rgba(253, 184, 19, 0.4);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background: rgba(253, 184, 19, 0.4);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-color {
+  color: #1a1a1a;
+}
+
+.brand-bg {
+  background: #1a1a1a;
+}
+
+/* ============================================
+   LOADING SCREEN
+   ============================================ */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(26, 26, 26, 0.1);
+  border-top-color: #1a1a1a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+p {
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+   TYPOGRAPHY HIERARCHY SYSTEM
+   Section Label > Title > Subtitle > Body
+   ============================================ */
+
+/* Section Label - Largest (Main section headings) */
+.section-label,
+.hero-label,
+.page-label {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+/* Title - Medium (Secondary headings, card titles) */
+.section-title,
+.card-title,
+.hero-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+/* Subtitle - Small (Supporting text, descriptions) */
+.section-subtitle,
+.card-subtitle,
+.hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* Body text - Regular */
+.body-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Responsive Typography - Tablet */
+@media (max-width: 1024px) {
+
+  .section-label,
+  .hero-label,
+  .page-label {
+    font-size: 2rem;
+  }
+
+  .section-title,
+  .card-title,
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle,
+  .card-subtitle,
+  .hero-subtitle {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Responsive Typography - Mobile */
+@media (max-width: 768px) {
+
+  .section-label,
+  .hero-label,
+  .page-label {
+    font-size: 1.75rem;
+  }
+
+  .section-title,
+  .card-title,
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle,
+  .card-subtitle,
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .body-text {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================
+   IMAGE OPTIMIZATION
+   ============================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 1400px) {
+  .main-content {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 65px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+
+  .navbar,
+  .footer {
+    display: none;
+  }
+
+  .main-content {
+    padding-top: 0;
+  }
+}

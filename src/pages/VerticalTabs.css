@@ -24,7 +24,7 @@
   top: 160px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 24px;
   max-height: calc(100vh - 180px);
   overflow-y: hidden;
@@ -88,7 +88,7 @@
   min-height: 80px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 12px !important;
+  border-radius: 16px !important;
   cursor: pointer;
   transition: none !important;
   text-align: left;
@@ -112,14 +112,14 @@
   border-color: var(--border-color) !important;
   transform: none !important;
   box-shadow: none !important;
-  border-radius: 12px !important;
+  border-radius: 16px !important;
   overflow: hidden !important;
 }
 
 .tab-button.active {
   background: var(--accent-light) !important;
   border-color: var(--accent-color) !important;
-  border-radius: 12px !important;
+  border-radius: 16px !important;
   overflow: hidden !important;
 }
 
@@ -128,7 +128,7 @@
 .tab-button.active:active {
   background: var(--accent-light) !important;
   border-color: var(--accent-color) !important;
-  border-radius: 12px !important;
+  border-radius: 16px !important;
   overflow: hidden !important;
 }
 
@@ -250,7 +250,7 @@
 .tab-content-area {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 24px;
   padding: 40px;
 }
 
@@ -305,7 +305,7 @@
   padding: 10px 16px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   color: var(--text-primary);
   font-size: 15px;
   font-weight: 500;
@@ -325,7 +325,7 @@
   width: 100%;
   max-width: 700px;
   height: 500px;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
   background: var(--bg-secondary);
   display: flex;
@@ -352,7 +352,7 @@
 .details-card {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 24px;
 }
 
@@ -448,7 +448,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
@@ -508,6 +508,22 @@
   width: 100%;
 }
 
+body.dark-mode .dropdown-trigger {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .dropdown-menu {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .dropdown-option.active {
+  background: var(--accent-light);
+  border-color: var(--accent-color);
+}
+
 /* Dropdown Trigger Button */
 .dropdown-trigger {
   width: 100%;
@@ -518,7 +534,7 @@
   padding: 16px 20px;
   background: var(--bg-card);
   border: 2px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: pointer;
   font-family: 'Zist', 'Inter', sans-serif;
   transition: all 0.3s ease;
@@ -545,12 +561,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #FDB813 0%, #f59e0b 100%);
+  background: var(--accent-color);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--text-inverse);
   font-size: 15px;
   font-weight: 700;
-  background: rgba(253, 184, 19, 0.25);
 }
 
 .trigger-text {
@@ -598,10 +613,11 @@
   right: 0;
   background: var(--bg-card);
   border: 2px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 6px;
   max-height: 380px;
   overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   z-index: 1000;
   transform-origin: top;
 }

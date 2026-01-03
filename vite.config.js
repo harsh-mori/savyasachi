@@ -2,9 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { createRequire } from 'node:module';
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+const require = createRequire(import.meta.url);
 
 // https://vite.dev/config/
 export default defineConfig(async ({ command, mode }) => {
@@ -13,7 +15,7 @@ export default defineConfig(async ({ command, mode }) => {
   // Only add prerender plugin during production build
   if (command === 'build' && mode === 'production') {
     try {
-      const { default: vitePrerender } = await import('vite-plugin-prerender')
+      const vitePrerender = require('vite-plugin-prerender');
       plugins.push(
         vitePrerender({
           // Required - Path to static HTML file
