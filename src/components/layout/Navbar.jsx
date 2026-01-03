@@ -100,12 +100,12 @@ const Navbar = () => {
               <Icon name={isDark ? 'sun' : 'moon'} />
             </button>
 
-            <a href={BROCHURE_URL} download>
+            {/* <a href={BROCHURE_URL} download>
               <button className="navbar-btn outline-btn">
                 <Icon name="download" />
                 <span>Download Brochure</span>
               </button>
-            </a>
+            </a> */}
 
             <button
               className="mobile-menu-toggle"
@@ -191,12 +191,12 @@ const Navbar = () => {
           </nav>
 
           <div className="mobile-menu-actions">
-            <a href={BROCHURE_URL} download>
+            {/* <a href={BROCHURE_URL} download>
               <button className="navbar-btn outline-btn">
                 <Icon name="download" />
                 <span>Download Brochure</span>
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

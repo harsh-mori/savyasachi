@@ -9,18 +9,21 @@ const __dirname = path.dirname(__filename)
 const require = createRequire(import.meta.url);
 
 // https://vite.dev/config/
-export default defineConfig(async ({ command, mode }) => {
+export default defineConfig(({ command, mode }) => {
   const plugins = [react()]
 
   // Only add prerender plugin during production build
   if (command === 'build' && mode === 'production') {
     try {
-      const vitePrerender = require('vite-plugin-prerender');
+      const vitePrerenderModule = require('vite-plugin-prerender');
+      const vitePrerender = vitePrerenderModule.default || vitePrerenderModule;
+
+      const PuppeteerRendererModule = require('@prerenderer/renderer-puppeteer');
+      const PuppeteerRenderer = PuppeteerRendererModule.default || PuppeteerRendererModule;
+
       plugins.push(
         vitePrerender({
-          // Required - Path to static HTML file
           staticDir: path.join(__dirname, 'dist'),
-          // Routes to prerender
           routes: [
             '/',
             '/about',
@@ -37,14 +40,12 @@ export default defineConfig(async ({ command, mode }) => {
             '/products/standard-workholding',
             '/contact'
           ],
-          // Renderer configuration
-          renderer: '@prerenderer/renderer-puppeteer',
-          rendererOptions: {
-            // Wait until network is idle before capturing
+          renderer: new PuppeteerRenderer({
             renderAfterDocumentEvent: 'render-event',
-            // Headless mode
             headless: true,
-            // Inject property to detect prerendering
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+          }),
+          rendererOptions: {
             injectProperty: '__PRERENDER_INJECTED',
             inject: {
               prerendered: true
