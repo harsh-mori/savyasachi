@@ -8,7 +8,7 @@ import '../facilities/FacilitiesDetail.css';
 const GALLERY_IMAGES = [
   { src: '/assets/images/products/zero-point-clamping/zero-point-clamping-systems-1.png', alt: 'Zero point clamping system for quick changeover', title: 'Zero Point Clamping Systems 1' },
   { src: '/assets/images/products/zero-point-clamping/zero-point-clamping-systems-2.png', alt: 'Zero point fixture with precision positioning', title: 'Zero Point Clamping Systems 2' },
-  { src: '/assets/images/products/zero-point-clamping/zero-point-modal.png', alt: 'Zero point clamp for maximum productivity', title: 'Zero Point Clamping Systems 3' }
+  { src: '/assets/images/products/zero-point-clamping/zero-point-clamping-systems-3.png', alt: 'Zero point clamp for maximum productivity', title: 'Zero Point Clamping Systems 3' }
 ];
 
 const BREADCRUMB_ITEMS = [
