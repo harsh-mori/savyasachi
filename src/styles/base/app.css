@@ -319,6 +319,13 @@ img {
    RESPONSIVE BREAKPOINTS
    ============================================ */
 
+/* Small Laptops - Scale down UI to 80% */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  html {
+    zoom: 80%;
+  }
+}
+
 @media (max-width: 1400px) {
   .main-content {
     padding-top: 70px;
