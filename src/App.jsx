@@ -66,6 +66,8 @@ const AppContent = memo(() => (
 
 AppContent.displayName = 'AppContent';
 
+import { Analytics } from '@vercel/analytics/react';
+
 function App() {
   return (
     <HelmetProvider>
@@ -73,6 +75,7 @@ function App() {
         <ScrollToTop />
         <RouteTitle />
         <AppContent />
+        <Analytics />
       </Router>
     </HelmetProvider>
   );
