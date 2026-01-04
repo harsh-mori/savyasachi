@@ -46,8 +46,8 @@ const ImageGallery = ({ images = [] }) => {
     if (!lightboxContainerRef.current) return;
 
     if (!document.fullscreenElement) {
-      lightboxContainerRef.current.requestFullscreen().catch((err) => {
-        console.error('Error attempting to enable fullscreen:', err);
+      lightboxContainerRef.current.requestFullscreen().catch(() => {
+        // Fullscreen not supported or denied
       });
     } else {
       document.exitFullscreen();

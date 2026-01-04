@@ -39,7 +39,6 @@ const ContactForm = () => {
         try {
             // Internal Validation - NOT shown to user
             if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
-                console.error('EmailJS Config Missing');
                 throw new Error('CONFIG_MISSING');
             }
 
@@ -68,8 +67,7 @@ const ContactForm = () => {
                 localStorage.setItem(LAST_SUBMISSION_KEY, Date.now().toString());
                 setTimeout(() => setSubmitStatus(null), 5000);
             }
-        } catch (error) {
-            console.error('Submission Error:', error);
+        } catch {
             setSubmitStatus('error');
             setErrorMessage('Failed to send message. Please try again later.');
         } finally {
