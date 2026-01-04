@@ -20,7 +20,7 @@ export const contactData = {
     highway: "Rajkot – Gondal Highway",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/savya-sachi-engineering",
+    linkedin: "https://www.linkedin.com/company/savyasachi-engineering/",
     twitter: "https://twitter.com/savyasachi",
     email: "info@savya-sachi.com",
   },

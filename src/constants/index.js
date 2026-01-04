@@ -14,5 +14,5 @@ export const LOGO = {
 export const BROCHURE_URL = '/brochure.pdf';
 
 export const SOCIAL_LINKS = {
-    linkedin: 'https://www.linkedin.com/company/savya-sachi-engineering',
+    linkedin: 'https://www.linkedin.com/company/savyasachi-engineering/',
 };

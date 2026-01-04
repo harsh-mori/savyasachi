@@ -136,7 +136,7 @@ export const organizationSchema = {
     "email": "info@savya-sachi.com",
     "availableLanguage": ["English", "Hindi", "Gujarati"]
   },
-  "sameAs": ["https://www.linkedin.com/company/savya-sachi-engineering"]
+  "sameAs": ["https://www.linkedin.com/company/savyasachi-engineering/"]
 };
 
 export const localBusinessSchema = {
