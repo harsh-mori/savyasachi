@@ -11,16 +11,9 @@ const GALLERY_IMAGES = [
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-3.png', alt: 'Multi-station mechanical fixture system', title: 'Mechanical Jigs and Fixtures 3' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-4.png', alt: 'Heavy-duty mechanical workholding fixture', title: 'Mechanical Jigs and Fixtures 4' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-5.png', alt: 'Modular mechanical fixture with adjustable clamping', title: 'Mechanical Jigs and Fixtures 5' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-6.jpg', alt: 'Precision drilling jig for repetitive operations', title: 'Mechanical Jigs and Fixtures 6' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-7.jpg', alt: 'CNC machining fixture with quick-change capability', title: 'Mechanical Jigs and Fixtures 7' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-8.jpg', alt: 'Advanced mechanical clamping system', title: 'Mechanical Jigs and Fixtures 8' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-9.jpg', alt: 'Welding fixture with position control', title: 'Mechanical Jigs and Fixtures 9' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-10.jpg', alt: 'Production-grade mechanical fixture', title: 'Mechanical Jigs and Fixtures 10' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-11.jpg', alt: 'Custom milling fixture for automotive parts', title: 'Mechanical Jigs and Fixtures 11' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-12.jpg', alt: 'High-precision mechanical jig assembly', title: 'Mechanical Jigs and Fixtures 12' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-13.jpg', alt: 'Mechanical fixture design with precision clamping mechanism', title: 'Mechanical Jigs and Fixtures 13' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-14.jpg', alt: 'Multi-station mechanical fixture for batch production', title: 'Mechanical Jigs and Fixtures 14' },
-  { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-15.jpg', alt: 'Custom mechanical workholding solution for complex parts', title: 'Mechanical Jigs and Fixtures 15' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-16.jpg', alt: 'Heavy-duty mechanical fixture for large components', title: 'Mechanical Jigs and Fixtures 16' },
   { src: '/assets/images/products/mechanical-fixtures/mechanical-jigs-and-fixtures-17.png', alt: 'Modular mechanical fixture system with adjustable components', title: 'Mechanical Jigs and Fixtures 17' }
 ];
