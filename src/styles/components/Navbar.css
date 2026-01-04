@@ -670,10 +670,10 @@
     width: 600px;
   }
 
-  /* Facilities - maintain single column */
+  /* Facilities - maintain 2 columns */
   .nav-item:nth-child(3) .nav-dropdown-content {
-    min-width: 320px;
-    width: 320px;
+    min-width: 500px;
+    width: 500px;
   }
 
   /* Products - maintain 2 columns */
@@ -695,8 +695,8 @@
   }
 
   .nav-item:nth-child(3) .nav-dropdown-content {
-    min-width: 320px;
-    width: 320px;
+    min-width: 500px;
+    width: 500px;
   }
 
   .nav-item:nth-child(4) .nav-dropdown-content {

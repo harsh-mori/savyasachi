@@ -330,7 +330,14 @@ const ImageGallery = ({ images = [] }) => {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      style={{ position: 'relative', display: 'inline-block' }}
+                      style={{
+                        position: 'relative',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '100%',
+                        height: '100%',
+                      }}
                     >
                       <motion.img
                         src={images[currentImageIndex].src}
@@ -339,6 +346,11 @@ const ImageGallery = ({ images = [] }) => {
                         draggable={false}
                         onMouseDown={(e) => e.preventDefault()}
                         onContextMenu={(e) => e.preventDefault()}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain',
+                        }}
                       />
                       {/* Internal Image Watermark */}
                       <div className="watermark-overlay" style={{ top: 0, left: 0, width: '100%', height: '100%', transform: 'none', background: 'transparent' }}>
