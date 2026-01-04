@@ -376,17 +376,26 @@
   .social-links {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
   }
 
   .social-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
+    min-width: unset;
+    margin: 0 auto;
+    flex: none;
   }
 
   .footer-social {
     padding: 2rem 0;
     margin: 2rem 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-social-title {
@@ -401,5 +410,27 @@
 
   .footer-logo-img {
     height: 50px;
+  }
+
+  .social-links {
+    padding: 0;
+  }
+
+  .social-card {
+    max-width: 100%;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .social-icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-label {
+    font-size: 0.95rem;
+  }
+
+  .social-desc {
+    font-size: 0.875rem;
   }
 }
