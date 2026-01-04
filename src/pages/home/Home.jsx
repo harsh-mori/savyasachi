@@ -1,5 +1,5 @@
 ﻿import SEO from '../../components/common/SEO';
-import { seoData, organizationSchema, localBusinessSchema, websiteSchema } from '../../content/seoData';
+import { seoData, organizationSchema, localBusinessSchema, websiteSchema, faqSchema, serviceSchema } from '../../content/seoData';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import ServicesSection from './ServicesSection';
@@ -16,7 +16,7 @@ const Home = () => {
                 keywords={seoData.home.keywords}
                 canonicalUrl={seoData.home.canonicalUrl}
                 ogImage={seoData.home.ogImage}
-                structuredData={[organizationSchema, localBusinessSchema, websiteSchema]}
+                structuredData={[organizationSchema, localBusinessSchema, websiteSchema, faqSchema, serviceSchema]}
             />
             <HeroSection />
             <AboutSection />

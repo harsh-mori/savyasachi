@@ -1,6 +1,6 @@
 ﻿export const seoData = {
   home: {
-    title: "Savyasachi Engineering",
+    title: "Savyasachi Engineering | Precision Jigs & Fixtures Manufacturer in Rajkot, Gujarat",
     description: "Leading manufacturer of precision jigs, fixtures, and workholding solutions in Rajkot, Gujarat. Specializing in hydraulic fixtures, mechanical fixtures, and zero point clamping systems for aerospace, defense, and automotive industries since 2017.",
     keywords: "jigs and fixtures, workholding solutions, hydraulic fixtures, mechanical fixtures, zero point clamping, CNC fixtures, precision fixtures, fixture manufacturer Rajkot, Gujarat, India",
     canonicalUrl: "/",
@@ -223,3 +223,99 @@ export const createProductSchema = (productName, description, image) => ({
   }
 });
 
+// FAQ Schema for homepage - helps get rich snippets
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What products does Savyasachi Engineering manufacture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savyasachi Engineering manufactures precision jigs and fixtures, hydraulic fixtures, mechanical fixtures, turning fixtures, zero point clamping systems, and standard workholding solutions for CNC machining centers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which industries does Savyasachi Engineering serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve aerospace, defense, automotive, locomotive, valve and fittings, and general engineering industries with precision workholding solutions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Savyasachi Engineering located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Savyasachi Engineering is located at Street 2, Global Industrial Park, Near Kishan Petrol Pump, Rajkot-Gondal Highway, Rajkot, Gujarat 360004, India."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many years of experience does Savyasachi Engineering have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Founded in 2017 by Mr. Dharmesh Mori who has over 20 years of experience in precision engineering and fixture manufacturing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What CNC machines does Savyasachi Engineering use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use advanced CNC machines including Jyoti DX200 5A, Jyoti VMC 1060, Jyoti VMC 850 with 3rd and 4th axis capabilities for high-precision machining."
+      }
+    }
+  ]
+};
+
+// Service Schema
+export const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Precision Fixture Manufacturing",
+  "provider": {
+    "@type": "Organization",
+    "name": "Savyasachi Engineering"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Workholding Solutions",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mechanical Jigs & Fixtures"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hydraulic & Pneumatic Fixtures"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Zero Point Clamping Systems"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "CNC Precision Job Work"
+        }
+      }
+    ]
+  }
+};
